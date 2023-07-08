@@ -1,0 +1,24 @@
+$main-color: #6f0000;
+$main-transition-color: #200122;
+$main-back: rgb(111, 0, 0);
+$main-resalt: rgb(151, 13, 13);
+
+$main-black: #111;
+$main-black-transparent: rgba(17, 17, 17, 0.8);
+$main-black-semi-transparent: rgba(17, 17, 17, 0.5);
+$main-black-shadow: rgb(45, 44, 44);
+
+/* Text */
+$max-weight: 500;
+$main-txt: rgb(234, 231, 231);
+$main-txt-resalt: rgb(231, 101, 122);
+$main-txt-semishadow: rgba(234, 231, 231, 0.8);
+
+@mixin background-main {
+    background: $main-transition-color;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $main-color, $main-transition-color);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $main-color, $main-transition-color);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
