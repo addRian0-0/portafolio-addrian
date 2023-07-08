@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 
-import styles from "./styles/Components.module.scss";
-import CardInfo from "./components/CardInfo";
-import CardHabilidades from "./components/CardHabilidades";
-import CardProyectos from "./components/CardProyects";
+import styles from "../styles/Components.module.scss";
+import CardInfo from "../components/CardInfo";
+import CardHabilidades from "../components/CardHabilidades";
+import CardProyectos from "../components/CardProyects";
 
 export default function Home() {
 
   return (
     <>
-      <Layout>
+      <Layout title="Inicio" >
 
         <div className={styles.cardPresentation} >
           <div className={styles.presentationInfo} >

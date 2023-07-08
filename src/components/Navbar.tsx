@@ -5,13 +5,14 @@ import ButtonCV from "./ButtonCV";
 import styles from "../styles/Components.module.scss";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({ page }: { page: string }) {
     return (
         <header className={styles.header}>
-            <div><h1>Ithan Flores <span> - Inicio</span> </h1></div>
+            <div><h1>Ithan Flores <span> - {page}</span> </h1></div>
             <div>
                 <ul className={styles.menu} >
                     <li>
+
                         <LinkScroll
                             to="acerca"
                             spy={true}
@@ -19,10 +20,12 @@ export default function Navbar() {
                             offset={-70}
                             duration={1000}
                         >
-                            <a className={styles.aUnset} href="#acerca">Acerca</a>
+                            Acerca
                         </LinkScroll>
+
                     </li>
                     <li>
+
                         <LinkScroll
                             to="habilidades"
                             spy={true}
@@ -30,10 +33,11 @@ export default function Navbar() {
                             offset={-70}
                             duration={1000}
                         >
-                            <a className={styles.aUnset} href="#habilidades">Habilidades</a>
+                            Habilidades
                         </LinkScroll>
                     </li>
                     <li>
+
                         <LinkScroll
                             to="proyectos"
                             spy={true}
@@ -41,10 +45,10 @@ export default function Navbar() {
                             offset={-70}
                             duration={1000}
                         >
-                            <a className={styles.aUnset} href="#proyectos">Proyectos</a>
+                            Proyectos
                         </LinkScroll>
                     </li>
-                    <li>
+                    {/* <li>
                         <LinkScroll
                             to="#"
                             spy={true}
@@ -52,12 +56,14 @@ export default function Navbar() {
                             offset={-70}
                             duration={1000}
                         >
-                            <a className={styles.aUnset} href="#">Contáctame</a>
-
+                            Contacto
                         </LinkScroll>
-                    </li>
+
+                    </li> */}
                     <li>
-                        <ButtonCV />
+                        <Link href="/more/" target="blank">
+                            <ButtonCV />
+                        </Link>
                     </li>
                 </ul>
             </div>
