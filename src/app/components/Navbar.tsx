@@ -1,5 +1,9 @@
+"use client";
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+
 import ButtonCV from "./ButtonCV";
 import styles from "../styles/Components.module.scss";
+import Link from "next/link";
 
 export default function Navbar() {
     return (
@@ -7,11 +11,54 @@ export default function Navbar() {
             <div><h1>Ithan Flores <span> - Inicio</span> </h1></div>
             <div>
                 <ul className={styles.menu} >
-                    <li>Acerca</li>
-                    <li>Habilidades</li>
-                    <li>Proyectos</li>
-                    <li>Contactame</li>
-                    <li><ButtonCV /></li>
+                    <li>
+                        <LinkScroll
+                            to="acerca"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            <a className={styles.aUnset} href="#acerca">Acerca</a>
+                        </LinkScroll>
+                    </li>
+                    <li>
+                        <LinkScroll
+                            to="habilidades"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            <a className={styles.aUnset} href="#habilidades">Habilidades</a>
+                        </LinkScroll>
+                    </li>
+                    <li>
+                        <LinkScroll
+                            to="proyectos"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            <a className={styles.aUnset} href="#proyectos">Proyectos</a>
+                        </LinkScroll>
+                    </li>
+                    <li>
+                        <LinkScroll
+                            to="#"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            <a className={styles.aUnset} href="#">Contáctame</a>
+
+                        </LinkScroll>
+                    </li>
+                    <li>
+                        <ButtonCV />
+                    </li>
                 </ul>
             </div>
         </header>

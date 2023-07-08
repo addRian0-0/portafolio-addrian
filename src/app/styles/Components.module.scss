@@ -18,20 +18,25 @@ $header-height: 12%;
         padding: 0 3% 0 3%;
     }
 
-    .menu{
+    .menu {
         color: $main-txt-semishadow;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        li{
+
+        li {
             margin: 12px;
             cursor: pointer;
             transition: 0.3s;
+            .aUnset{
+                all: unset;
+            }
         }
-        li:hover{
+
+        li:hover {
             color: $main-txt;
-            transform: scale(1.2, 1.2);            
+            transform: scale(1.2, 1.2);
         }
     }
 
@@ -95,7 +100,6 @@ $header-height: 12%;
 
 .btnCv:hover {
     background-color: $main-resalt;
-    transform: scale(1.1, 1.1);
     color: $main-txt;
 }
 
@@ -378,7 +382,6 @@ $header-height: 12%;
     }
 }
 
-
 .fadeIn {
     opacity: 0;
     transition: opacity 1s;
@@ -386,4 +389,36 @@ $header-height: 12%;
     &.isVisible {
         opacity: 1;
     }
+}
+
+/* Diseno responsivo */
+@media screen and (max-width: 850px) {
+
+    .cardPresentation {
+        margin: 0;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin-top: 35%;
+        justify-content: center;
+        align-items: center;
+
+        .img {
+            width: 196px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .presentationInfo,
+        h2 {
+            max-width: 250px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    }
+
 }
