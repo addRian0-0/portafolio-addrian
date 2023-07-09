@@ -5,6 +5,7 @@ import styles from "../styles/Components.module.scss";
 import CardInfo from "../components/CardInfo";
 import CardHabilidades from "../components/CardHabilidades";
 import CardProyectos from "../components/CardProyects";
+import Head from "next/head";
 
 export default function Home() {
 

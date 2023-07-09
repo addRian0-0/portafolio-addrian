@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-/* import personitaimg from "../assets/programacion.png";
-import backend from "../assets/backend.png"; */
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Tooltip from '@mui/material/Tooltip';
@@ -10,7 +8,9 @@ import styles from "../styles/Components.module.scss";
 import { IHabilidades } from "../interfaces/HabilidadesTecnologias";
 import { tecFront, tecBack } from "../helpers/assets-imgs";
 import Image from "next/image";
+import Link from "next/link";
 import FadeIn from "./FadeIn";
+
 export default function CardHabilidades() {
 
     const [secHab, setSectionHabilidad] = useState<IHabilidades>(tecFront);
@@ -51,10 +51,20 @@ export default function CardHabilidades() {
         <FadeIn>
             <div id="habilidades" className={styles.cardHabilidades}>
                 <h2>Mis habilidades como...</h2>
+                <div className={styles.introHabilidades} >
+                    <p>
+                        Durante los últimos años, me he enfocado en estudiar
+                        programación con un enfoque en el desarrollo web, tanto
+                        del lado del cliente como del servidor. He trabajado con tecnologías como:
+                    </p>
+                    <Link className={styles.moreInformation} href={"/more"}>Más información sobre formación y habilidades...</Link>
+                </div>
                 <div className={styles.habilidadesInfo}>
+
                     <div className={styles.arrow} >
                         <KeyboardArrowLeftIcon onClick={anterior} sx={{ fontSize: "42px" }} />
                     </div>
+
                     <div className={styles.main}>
                         <div className={styles.title}>
                             <div className={styles.img}>
@@ -89,9 +99,11 @@ export default function CardHabilidades() {
 
                         </div>
                     </div>
+
                     <div className={styles.arrow}>
                         <KeyboardArrowRightIcon onClick={siguiente} sx={{ fontSize: "42px" }} />
                     </div>
+                    
                 </div>
             </div >
         </FadeIn>

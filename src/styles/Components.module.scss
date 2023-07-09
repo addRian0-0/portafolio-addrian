@@ -29,7 +29,8 @@ $header-height: 12%;
             margin: 12px;
             cursor: pointer;
             transition: 0.3s;
-            .aUnset{
+
+            .aUnset {
                 all: unset;
             }
         }
@@ -170,6 +171,20 @@ $header-height: 12%;
     }
 }
 
+.moreInformation {
+    all: unset;
+    margin: 16px;
+    color: $main-txt-semishadow;
+    transition: 0.3s;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.moreInformation:hover {
+    transform: scale(1.2, 1.2);
+    color: $main-txt-resalt
+}
+
 /* card info */
 .cardInfo {
     /* (debe cambiar en responsive) */
@@ -205,6 +220,12 @@ $header-height: 12%;
     margin: 5%;
     margin-top: 80px;
     color: $main-txt;
+
+    .introHabilidades {
+        margin: 10px;
+        padding: 10px;
+        font-size: 18px;
+    }
 
     .habilidadesInfo {
         display: flex;
@@ -378,6 +399,66 @@ $header-height: 12%;
                 color: $main-txt-resalt;
                 transform: scale(1.2, 1.2);
             }
+        }
+    }
+}
+
+/* certification */
+.certificaciones {
+    background-color: rgba(17, 17, 17, 0.5);
+    margin: 5%;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        color: $main-txt;
+    }
+
+    .arrow:hover {
+        transform: scale(1.3, 1.3);
+    }
+
+    .main {
+        margin: inherit;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.descripcionCertificacion {
+    margin: 3% 7% 3% 7%;
+    color: $main-txt;
+    font-size: 16px;
+
+    p {
+        cursor: pointer;
+
+        .element {
+            color: $main-txt-semishadow;
+        }
+
+        .valueLink{
+            all: unset;
+        }
+
+        .valueLink:hover{
+            transition: 0.15s;
+            text-decoration: underline;
+        }
+
+        .value:hover {
+            transition: 0.15s;
+            color: $main-txt-resalt;
         }
     }
 }
