@@ -22,7 +22,7 @@ export default function Navbar({ page }: { page: string }) {
         <header className={styles.header}>
             <div><h1>Ithan Flores <span> - {page}</span> </h1></div>
             <div>
-                <button className={styles.menuIcon} onClick={setShow} >
+                <button className={`${styles.menuIcon} animate__animated animate__bounce`} onClick={setShow} >
                     <MenuIcon color="inherit" />
                 </button>
                 <ul
@@ -73,7 +73,7 @@ export default function Navbar({ page }: { page: string }) {
                         {
                             pathname !== "/" ?
                                 <Link className={styles.aUnset} href={"/#proyectos"} >
-                                    Habilidades
+                                    Proyectos
                                 </Link>
                                 :
                                 <LinkScroll
