@@ -5,23 +5,25 @@ import styles from "../styles/Components.module.scss";
 
 export default function CardProyectos() {
     return (
-        <div id="proyectos" className={styles.cardProyectos} >
-            <h2>Proyectos...</h2>
-            <div className={styles.containerCards}>
-                {
-                    arrayCards.map(card => {
-                        return <Card key={uuidv4()}
-                            title={card.title}
-                            description={card.description}
-                            lista={card.lista}
-                            linkApp={card.linkApp}
-                            linkrepo={card.linkrepo}
-                        />
-                    })
-                }
+        <section id="proyectos">
+            <div className={styles.cardProyectos} >
+                <h2>Proyectos...</h2>
+                <div className={styles.containerCards}>
+                    {
+                        arrayCards.map(card => {
+                            return <Card key={uuidv4()}
+                                title={card.title}
+                                description={card.description}
+                                lista={card.lista}
+                                linkApp={card.linkApp}
+                                linkrepo={card.linkrepo}
+                            />
+                        })
+                    }
 
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 

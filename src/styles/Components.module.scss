@@ -95,7 +95,7 @@ $header-height: 12%;
     transition: 0.3s;
 
     a {
-        text-decoration: none;
+        all: unset;
     }
 }
 
@@ -438,7 +438,7 @@ $header-height: 12%;
 .descripcionCertificacion {
     margin: 3% 7% 3% 7%;
     color: $main-txt;
-    font-size: 16px;
+    font-size: 18px;
 
     p {
         cursor: pointer;
@@ -447,11 +447,11 @@ $header-height: 12%;
             color: $main-txt-semishadow;
         }
 
-        .valueLink{
+        .valueLink {
             all: unset;
         }
 
-        .valueLink:hover{
+        .valueLink:hover {
             transition: 0.15s;
             text-decoration: underline;
         }
@@ -483,10 +483,21 @@ $header-height: 12%;
         justify-content: center;
         align-items: center;
 
+
         .img {
             width: 196px;
             height: auto;
             border-radius: 50%;
+        }
+
+        .presentationInfo {
+            .h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 22px;
+            }
         }
 
         .presentationInfo,
