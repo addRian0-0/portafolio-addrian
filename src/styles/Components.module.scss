@@ -18,6 +18,10 @@ $header-height: 12%;
         padding: 0 3% 0 3%;
     }
 
+    .menuIcon {
+        display: none;
+    }
+
     .menu {
         color: $main-txt-semishadow;
         list-style-type: none;
@@ -174,6 +178,8 @@ $header-height: 12%;
 .moreInformation {
     all: unset;
     margin: 16px;
+    padding: 16px;
+    text-decoration: underline;
     color: $main-txt-semishadow;
     transition: 0.3s;
     font-size: 18px;
@@ -475,6 +481,55 @@ $header-height: 12%;
 /* Diseno responsivo */
 @media screen and (max-width: 850px) {
 
+    .header {
+        color: $main-txt-semishadow;
+
+        .menuIcon {
+            all: unset;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .menuIcon:hover {
+            transform: scale(1.2, 1.2);
+            color: $main-txt
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .menuShow {
+            color: $main-txt-semishadow;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                margin: 6px;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 14px;
+
+                .aUnset {
+                    all: unset;
+                }
+
+                button {
+                    padding: 6px;
+                    font-size: 14px;
+                }
+            }
+
+            li:hover {
+                color: $main-txt;
+                transform: scale(1.2, 1.2);
+            }
+        }
+    }
+
     .cardPresentation {
         margin: 0;
         flex-direction: column-reverse;
@@ -511,6 +566,15 @@ $header-height: 12%;
             flex-wrap: wrap;
         }
 
+    }
+
+    .certificaciones {
+        .main {
+            .imageCer {
+                width: 267px;
+                height: 192.375px;
+            }
+        }
     }
 
 }

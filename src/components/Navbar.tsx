@@ -5,16 +5,29 @@ import ButtonCV from "./ButtonCV";
 import styles from "../styles/Components.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from "react";
 
 export default function Navbar({ page }: { page: string }) {
 
     const pathname = usePathname();
+    const [menuView, setMenuView] = useState<boolean>(false);
+
+    const setShow = () => {
+        setMenuView(!menuView);
+        console.log(menuView);
+    }
 
     return (
         <header className={styles.header}>
             <div><h1>Ithan Flores <span> - {page}</span> </h1></div>
             <div>
-                <ul className={styles.menu} >
+                <button className={styles.menuIcon} onClick={setShow} >
+                    <MenuIcon color="inherit" />
+                </button>
+                <ul
+                    className={menuView ? `${styles.menuShow} animate__animated animate__backInRight` : `${styles.menu} animate__animated animate__backInRight`}
+                >
                     <li>
 
                         {

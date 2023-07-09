@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { v4 as uuidv4 } from "uuid";
@@ -43,9 +43,14 @@ export default function MoreInfo() {
 
                 <div className={styles.main}>
                     <Image
-                        className={`animate__animated animate__fadeInDown`}
+                        className={`${styles.imageCer} animate__animated animate__fadeInDown`}
                         key={uuidv4()}
-                        src={img.src} width={img.wdt} height={img.hgt} alt={img.alt}
+                        src={img.src}
+                        /* width={windowSize[0] > 1200 ? 712 : 356}
+                        height={windowSize[1] > 700 ? 513 : 256.6} */
+                        width={712}
+                        height={513}
+                        alt={img.nombre}
                     />
                 </div>
 
@@ -62,7 +67,7 @@ export default function MoreInfo() {
                     <span className={styles.element}>ID de la credencial: </span> <span className={styles.value} >{img.id}</span> <br /> <br />
                     <span className={styles.element}>Url de la credencial: </span> <span className={styles.value} >
                         <Link className={styles.valueLink} href={img.url}>
-                            {img.url}
+                            ...{img.url.slice(12, 45)}...
                         </Link>
                     </span>
                     <br /> <br />
