@@ -90,13 +90,12 @@ const arrayCards: ICard[] = [
         description: `Mi portafolio personal en el que conocerás más de mis aptitudes y actitudes como persona y como desarrollador web. Construido con:`,
         lista: [
             `Sass`,
-            `React.js`,
+            `Next.js`,
             `TypeScript`,
             `Mui`,
-            `Vite`
         ],
-        linkApp: "https://addrian0-0.vercel.app/",
-        linkrepo: "https://github.com/addRian0-0/portafolio-dev"
+        linkApp: "https://portafolio-addrian.vercel.app/",
+        linkrepo: "https://github.com/addRian0-0/portafolio-addrian"
     },
     {
         title: "addHours - ¡Aprende más!",
